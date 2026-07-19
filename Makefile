@@ -7,7 +7,7 @@ test:
 	PYTHONPATH=. pytest app/tests/ --cov=app --cov-report=term -v
 
 lint:
-	black --check app/
+	black --check --target-version py312 app/
 	flake8 app/ --max-line-length=88
 
 docker-run:
