@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r app/requirements.txt
-      - run: pytest app/tests/ --cov=app --cov-report=term --junitxml=results.xml
+      - run: PYTHONPATH=. pytest app/tests/ --cov=app --cov-report=term --junitxml=results.xml
       - uses: actions/upload-artifact@v4
         if: always()
         with:

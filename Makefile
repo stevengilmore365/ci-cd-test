@@ -4,7 +4,7 @@ install:
 	pip install -r app/requirements.txt
 
 test:
-	pytest app/tests/ --cov=app --cov-report=term -v
+	PYTHONPATH=. pytest app/tests/ --cov=app --cov-report=term -v
 
 lint:
 	black --check app/
